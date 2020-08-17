@@ -1,9 +1,9 @@
 # see https://hub.docker.com/r/balenalib/raspberry-pi-node/tags
-FROM balenalib/%%BALENA_MACHINE_NAME%%-node:latest-stretch-run
+FROM balenalib/raspberrypi4-64-node:latest-stretch-run
 
 RUN apt-get update && apt-get install software-properties-common
 
-RUN add-apt-repository ppa:ubuntu-raspi2/ppa
+#RUN add-apt-repository ppa:ubuntu-raspi2/ppa
 
 # 1.Install wget and curl.  Only wget is needed for downloading repository.sandmann79.plugins-1.0.2.zip
 RUN apt-get clean && apt-get update && apt-get install -y \
